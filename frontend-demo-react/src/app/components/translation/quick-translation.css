@@ -1,0 +1,57 @@
+
+#qt-root {
+  flex:1;
+
+  margin-top:5%;
+  width: var(--app-width);
+  min-height: 100%;
+
+  display:flex;
+  flex-direction: column;
+  justify-content:flex-start;
+
+}
+
+.ls-root {
+
+  padding: 1rem 1rem 0.5rem 0rem;
+
+}
+
+.qt-group {
+  padding: 1rem 1rem 3rem 1rem;
+  min-height:100%;
+
+}
+
+@media screen and (min-width:721px) {
+
+  .qt-group {
+    padding: 10px;
+    width: 50%;
+
+  }
+
+  #qt-root {
+
+    margin-top: 0%;
+    padding: 20px;
+    justify-content:space-between;
+    flex-direction: row;
+
+  }
+
+}
+
+textarea {
+
+  width: 100%;
+  height:100%;
+
+  resize: none;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+}

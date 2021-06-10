@@ -1,0 +1,17 @@
+
+:root {
+
+  --app-width: 80%;
+
+}
+
+
+#root {
+
+  min-height: 40vh;
+  display:flex;
+
+  justify-content: stretch;
+  align-items: stretch;
+  flex-direction: column;
+}
