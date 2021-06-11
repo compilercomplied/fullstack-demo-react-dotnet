@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -12,7 +12,7 @@
   <ItemGroup>
     <ProjectReference Include="..\domain.contracts\domain.contracts.csproj" />
     <ProjectReference Include="..\domain.usecases\domain.usecases.csproj" />
-    <ProjectReference Include="..\http.client\http.client.csproj" />
+    <ProjectReference Include="..\infra.providers\infra.providers.csproj" />
   </ItemGroup>
 
 </Project>

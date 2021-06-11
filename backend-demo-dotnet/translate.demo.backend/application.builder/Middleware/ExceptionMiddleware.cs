@@ -50,14 +50,18 @@ namespace application.builder.Middleware
         message = ex.Message;
       }
       else
-      { 
+      {
         _logger.LogCritical("Unhandled exception", ex);
       }
 
 
       var httpResponse = new ErrorResponse { Message = message };
+      var opts = new JsonSerializerOptions 
+      { 
+        PropertyNamingPolicy = JsonNamingPolicy.CamelCase 
+      };
 
-      string result = JsonSerializer.Serialize(httpResponse);
+      string result = JsonSerializer.Serialize(httpResponse, opts);
 
       context.Response.ContentType = "application/json";
       context.Response.StatusCode = (int)code;

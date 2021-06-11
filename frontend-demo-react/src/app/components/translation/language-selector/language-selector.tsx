@@ -5,7 +5,7 @@ import { SetState } from "../../../extensions/react-wrap";
 // --- constants ---------------------------------------------------------------
 const availableLanguages: LanguageMaster[] = [
   { id: 1, code: "EN", displayname: "English" },
-  { id: 2, code: "GE", displayname: "German"  },
+  { id: 2, code: "DE", displayname: "German"  },
   { id: 3, code: "FR", displayname: "French"  },
 ]
 

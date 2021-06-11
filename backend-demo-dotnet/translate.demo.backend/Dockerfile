@@ -7,8 +7,11 @@ WORKDIR app
 RUN dotnet restore
 RUN dotnet publish -c Release -o out
 
-
+# second stage
 FROM mcr.microsoft.com/dotnet/aspnet:5.0
+ARG GOOGLE_PROJECTID=''
+ARG GOOGLE_APPLICATION_CREDENTIALS=''
+
 ENV ASPNETCORE_URLS=http://*:5000
 ENV ASPNETCORE_ENVIRONMENT="production"
 EXPOSE 5000
