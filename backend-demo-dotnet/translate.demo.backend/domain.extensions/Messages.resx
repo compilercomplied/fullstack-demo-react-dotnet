@@ -120,4 +120,7 @@
   <data name="Core_Error_DefaultError" xml:space="preserve">
     <value>Operation error</value>
   </data>
+  <data name="Validation_DefaultError" xml:space="preserve">
+    <value>Property can't be null or empty</value>
+  </data>
 </root>

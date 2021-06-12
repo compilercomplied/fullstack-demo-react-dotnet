@@ -6,10 +6,11 @@ using Microsoft.Extensions.Logging;
 namespace TranslateApi.Controllers
 {
 
-  [ApiController]
   [Route("[controller]")]
-  public class TranslationController : ControllerBase
+  public class TranslationController : ABCController
   {
+
+    readonly string[] LANGUAGES = new string[]{ "EN", "DE", "FR" };
 
     #region DI
     readonly ILogger<TranslationController> _logger;
@@ -26,10 +27,14 @@ namespace TranslateApi.Controllers
     #endregion DI
 
     [HttpPost]
-    public TranslationResponse Translate([FromBody] TranslationRequest req)
+    public IActionResult Translate([FromBody] TranslationRequest req)
     {
 
-      return _service.Translate(req);
+      var validation = req.IsValid(LANGUAGES);
+
+      if (validation.ContainsErrors()) return BadRequest(validation);
+
+      return Ok(_service.Translate(req));
 
     }
 

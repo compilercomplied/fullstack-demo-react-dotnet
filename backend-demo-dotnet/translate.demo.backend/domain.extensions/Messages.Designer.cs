@@ -68,5 +68,14 @@ namespace domain.extensions {
                 return ResourceManager.GetString("Core_Error_DefaultError", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Property can&apos;t be null or empty.
+        /// </summary>
+        internal static string Validation_DefaultError {
+            get {
+                return ResourceManager.GetString("Validation_DefaultError", resourceCulture);
+            }
+        }
     }
 }
